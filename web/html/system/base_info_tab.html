@@ -1,0 +1,116 @@
+<div id="base_info" class="tab-pane fade in active">
+	<div class="panel panel-default">
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left" style="padding-top: 7.5px;">数据库</h3>
+			<div class="btn-group pull-right">
+				<button id="btn_cancel_db" onclick="cancel_db()" type="button" class="btn">取消</button>&nbsp;
+				<button id="btn_modify_db" onclick="modify_db()" type="button" class="btn btn-primary">修改</button>&nbsp;
+				<button id="btn_save_db" onclick="save_db()" type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-2 control-label text-right">主机名/IP</label>
+						<div class="col-sm-10">
+							<input id="txt_db_host" type="text" class="form-control" value="{{ result['db_info']['host'] }}" disabled>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-2 control-label text-right">端口</label>
+						<div class="col-sm-10">
+							<input id="txt_db_port" type="text" class="form-control" value="{{ result['db_info']['port'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-2 control-label text-right">用户名</label>
+						<div class="col-sm-10">
+							<input id="txt_db_user" type="text" class="form-control" value="{{ result['db_info']['user'] }}" disabled>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-2 control-label text-right">密码</label>
+						<div class="col-sm-10">
+							<input id="txt_db_password" type="password" class="form-control" value="{{ result['db_info']['password'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left" style="padding-top: 7.5px;">共享目录</h3>
+			<div class="btn-group pull-right">
+				<button id="btn_cancel_share_folder" onclick="cancel_share_folder()" type="button" class="btn">取消</button>&nbsp;
+				<button id="btn_modify_share_folder" onclick="modify_share_folder()" type="button" class="btn btn-primary">修改</button>&nbsp;
+				<button id="btn_save_share_folder" onclick="save_share_folder()" type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group">
+						<label class="col-sm-1 control-label text-right">共享目录</label>
+						<div class="col-sm-10">
+							<input id="txt_share_folder" type="text" class="form-control" value="{{ result['share_folder'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left" style="padding-top: 7.5px;">SVN资源库</h3>
+			<div class="btn-group pull-right">
+				<button id="btn_cancel_svn" onclick="cancel_svn()" type="button" class="btn">取消</button>&nbsp;
+				<button id="btn_modify_svn" onclick="modify_svn()" type="button" class="btn btn-primary">修改</button>&nbsp;
+				<button id="btn_save_svn" onclick="save_svn()" type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-2 control-label text-right">用户名</label>
+						<div class="col-sm-10">
+							<input id="txt_svn_user_name" type="text" class="form-control" value="{{ result['svn_info']['user_name'] }}" disabled>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-2 control-label text-right">密码</label>
+						<div class="col-sm-10">
+							<input id="txt_svn_password" type="password" class="form-control" value="{{ result['svn_info']['password'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% block bottom %}
+<script>
+$(function(){
+	init_base_info_tab();
+});
+</script>
+{% end %}

@@ -1,0 +1,47 @@
+<div class="modal fade" id="modal_create_user" tabindex="-1" role="dialog" aria-labelledby="lb_create_user" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content">
+			<div class="modal-header">
+				新建用户
+			</div>
+	        <div class="modal-body">
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="select_product_for_create_modal">选择所属工作室</label>
+					<div class="col-sm-9">
+						<select id="select_product_for_create_modal" class="rainbow-select">
+							<option value="0" selected>选择所属工作室</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="select_role_for_create_modal">选择角色</label>
+					<div class="col-sm-9">
+						<select id="select_role_for_create_modal" class="rainbow-select">
+							<option value="0" selected>选择角色</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_email">Email</label>
+					<div class="col-sm-9 input-group" style="padding-left:15px;">
+						<input id="txt_email" type="text" class="form-control" placeholder="Email">
+						<span class="input-group-addon">@boyaa.com</span>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div id="progress_bar_for_create_modal" class="progress progress-striped active">
+					   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;padding-left: 15px;">
+					   </div>
+					</div>
+				</div>
+	        </div>
+	        <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+	            <button onclick="create_user()" type="button" class="btn btn-primary">保存</button>
+	        </div>
+	    </div>
+	</div>
+</div>

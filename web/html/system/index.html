@@ -1,0 +1,34 @@
+{% extends "system_base.html" %}
+
+{% block body %}
+<ul class="nav nav-tabs">
+	<li class="active">
+		<a id="tab_base_info" href="#base_info" data-toggle="tab">基本配置信息</a>
+	</li>
+	<li>
+		<a id="tab_product_info" href="#product_info" data-toggle="tab">工作室</a>
+	</li>
+	<li>
+		<a id="tab_project_info" href="#project_info" data-toggle="tab">项目</a>
+	</li>
+</ul>
+<br/>
+<div class="tab-content">
+	{% include 'base_info_tab.html' %}
+   	{% include 'product_info_tab.html' %}
+   	{% include 'project_info_tab.html' %}
+</div>
+
+{% include 'product_modal.html' %}
+{% include 'project_modal.html' %}
+{% include 'scan_case_modal.html' %}
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_index();
+});
+</script>
+{% end %}

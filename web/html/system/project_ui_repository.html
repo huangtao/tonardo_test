@@ -1,0 +1,46 @@
+<div id="project_ui_repository" class="tab-pane fade">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="col-sm-2">
+				<div class="input-group">
+					<span class="input-group-addon">Page</span>
+					<input id="txt_page" type="text" class="form-control" placeholder="Page">
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="input-group">
+					<span class="input-group-addon">FindMethod</span>
+					<input id="txt_find_method" type="text" class="form-control" placeholder="FindMethod">
+				</div>
+			</div>
+			<div class="btn-group">
+				<button onclick="search_ui()" type="button" class="btn btn-primary"><span class="fui-search"></button>
+			</div>
+
+			<div style="float:right;">
+				<button onclick="update_ui_repository()" type="button" class="btn btn-primary" title="更新UI存储库">
+					<span class="glyphicon glyphicon-refresh"></span>&nbsp;
+				</button>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table id="tb_ui_repository" class="table table-bordered table-hover">
+				<thead>
+					<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+						<th>No.</th>
+						<th>Page</th>
+						<th>ElementName</th>
+						<th>FindMethod</th>
+						<th>Value</th>
+						<th>Index</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="ui_repository_pagination" class="pagination">
+			</div>
+		</div>
+   	</div>
+</div>

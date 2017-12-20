@@ -1,0 +1,40 @@
+<div class="modal fade" id="modal_add_email" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content" style="height:80%;">
+			<div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <span id="title">选择收件人</span>
+			</div>
+	        <div class="modal-body">
+	        	<table style="width:100%;">
+	        		<tr>
+	        			<td style="width:45%;">
+	        				<select id="from" multiple="multiple" size="10" style="width:100%">
+	        				</select>
+	        			</td>
+	        			<td style="width:10%;">
+							<div class="btn-group-vertical" style="padding-left:20px;">
+								<button onclick="add_emails();" type="button" class="btn btn-primary btn-xs">
+									<span class="glyphicon glyphicon-arrow-right"></span>
+								</button>
+								<br/>
+								<button onclick="remove_emails()" type="button" class="btn btn-primary btn-xs">
+									<span class="glyphicon glyphicon-arrow-left"></span>
+								</button>
+							</div>
+	        			</td>
+	        			<td style="width:45%;">
+	        				<select id="to" multiple="multiple" size="10" style="width:100%">
+	        				</select>
+	        			</td>
+	        		</tr>
+	        	</table>
+
+	        </div>
+	        <div class="modal-footer">
+	            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	            <button onclick="update_emails();" type="button" class="btn btn-primary">确定</button>
+	        </div>
+	    </div>
+	</div>
+</div>

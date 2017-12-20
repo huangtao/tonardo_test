@@ -1,0 +1,30 @@
+<div class="modal fade" id="modal_select_case" tabindex="-1" role="dialog" aria-labelledby="lb_select_case" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content" style="height:80%;">
+			<div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <span id="title">选择测试用例</span>
+			</div>
+	        <div class="modal-body" style="overflow: scroll;">
+				<table id="tb_case_list_modal" class="table table-bordered table-hover" style="table-layout:fixed;">
+					<thead>
+						<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+							<th style="width:5%;"><input id="cb_cases" type="checkbox"></th>
+							<th style="width:8%;">No.</th>
+							<th>测试用例名称</th>
+							<th style="width:25%;">所属模块</th>
+							<th style="width:25%;">逻辑ID</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+	        </div>
+	        <div class="modal-footer">
+	            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> -->
+	            <button onclick="select_suites()" type="button" class="btn btn-primary">上一步</button>
+	            <button onclick="refresh_cases()" type="button" class="btn btn-primary">确定</button>
+	        </div>
+	    </div>
+	</div>
+</div>

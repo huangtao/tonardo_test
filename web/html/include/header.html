@@ -1,0 +1,67 @@
+<nav id="rainbow_navbar" class="navbar navbar-inverse" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-5">
+			<span class="sr-only">Toggle navigation</span>
+		</button>
+		<a class="navbar-brand" href="#">{{ escape(handler.settings["title"]) }}</a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar-collapse-5">
+		<ul id="rainbow_nav" class="nav navbar-nav">
+			<li>
+				<a id="main" onclick="click_nav('main/index')">首页</a>
+			</li>
+			<li>
+				<a id="case" onclick="click_nav('case/index')">测试用例</a>
+			</li>
+			<li>
+				<a id="plan" onclick="click_nav('plan/index')">测试计划</a>
+			</li>
+			<li>
+				<a id="report" onclick="click_nav('report/index')">测试报告</a>
+			</li>
+			{% if current_user != None and current_user['role_id'] == 1 %}
+			<!-- 1为系统管理员 -->
+			<li>
+				<a id="user" onclick="click_nav('user/index')">用户管理</a>
+			</li>
+			<li>
+				<a id="device" onclick="click_nav('device/index')">设备管理</a>
+			</li>
+			<li>
+				<a id="log" onclick="click_nav('log/index')">操作日志</a>
+			</li>
+			{% end %}
+			
+			{% if current_user != None and (current_user['role_id'] == 1 or current_user['role_id'] == 2) %}
+			<!-- 1为系统管理员；2为工作室管理员 -->
+			<li>
+				<a id="system" onclick="click_nav('system/index')">系统配置</a>
+			</li>
+			{% end %}
+		</ul>
+		{% if current_user != None %}
+		<div class="btn-group" style="float:right;padding-top:6px;">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+				aria-expanded="false" style="background-color:#34495e;color:#1abc9c;">
+				{{ current_user['name'] }}<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" style="min-width: 100px;">
+				{% if current_user['name'] == 'admin' or current_user['name'] == 'guest' %}
+				<li><a onclick="to_modify_pwd()">修改密码</a></li>
+				<li role="separator" class="divider"></li>
+				{% end %}
+				<li><a onclick="logout()">退出</a></li>
+			</ul>
+		</div>
+		<!-- 
+		<div style="float:right;padding-top:15px;">
+			<a>{{ current_user['name'] }}</a><span style="color:#16a085;">&nbsp;|&nbsp;</span><a onclick="logout()">退出</a>
+		</div>
+		 -->
+		
+		{% end %}
+	</div>
+	
+	
+</nav>

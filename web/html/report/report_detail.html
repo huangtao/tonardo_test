@@ -1,0 +1,146 @@
+{% extends "../base.html" %}
+
+{% block head %}
+<script src="{{ static_url('js/rainbow/report.js') }}"></script>
+{% end %}
+
+{% block body %}
+
+<div class="panel panel-default">
+
+	<div class="panel-heading clearfix">
+		<h3 class="panel-title pull-left" style="padding-top: 7.5px;">
+			计划【<a href="/plan/to_plan_detail?plan_id={{ result['plan']['plan_id']}}" style="color: #16a085;text-decoration: underline;">{{ result['plan']['plan_name'] }}</a>】的执行详情
+		</h3>
+		<div style="float:right;">
+			{% if result['report']['status'] == 0 or result['report']['status'] == 1 %}
+			<button onclick="download_report({{ result['report']['id'] }});" type="button" class="btn btn-primary">下载测试报告</button>&nbsp;
+			{% end %}
+			<button onclick="window.close();" type="button" class="btn btn-primary">关闭</button>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<table id="tb_report_summary" class="table table-bordered" style="text-align:center;">
+					<tbody>
+						<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+							<td style="font-weight:bold;width:20%;">开始时间</td>
+							<td style="font-weight:bold;width:20%;">结束时间</td>
+							<td style="font-weight:bold;width:20%;">持续时间</td>
+							<td style="font-weight:bold;width:20%;">状态</td>
+							<td style="font-weight:bold;width:20%;">测试APK</td>
+						</tr>
+						<tr>
+							<td>{{ result['report']['start_time'] }}</td>
+							<td>{{ result['report']['end_time'] }}</td>
+							<td>{{ result['report']['execute_time'] }}</td>
+							<td>
+							{% if result['report']['status'] == 0 %}
+								失败
+							{% elif result['report']['status'] == 1 %}
+								完成
+							{% elif result['report']['status'] == 2 %}
+								计划正在执行
+							{% elif result['report']['status'] == 3 %}
+								计划被停止
+							{% end %}
+							</td>
+							<td>
+								<a onclick="download_apk({{ result['plan']['plan_id']}})" style="text-decoration:underline ;">{{ result['plan']['apk_name']}}</a>
+								<!-- <button onclick="download({{ result['plan']['plan_id']}})" type="button" class="btn btn-primary" title="下载被测APK">
+									<span class="glyphicon glyphicon-cloud-download">
+								</button> -->
+							</td>
+						</tr>
+						<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+							<td style="font-weight:bold;">用例总数</td>
+							<td style="font-weight:bold;">成功用例</td>
+							<td style="font-weight:bold;">失败用例</td>
+							<td style="font-weight:bold;">未执行用例</td>
+							<td style="font-weight:bold;">运行设备</td>
+						</tr>
+						<tr>
+							<td>
+								<a onclick="get_rel_cases_by_status(-1)" style="text-decoration:underline ;">
+									{{ result['report']['case_total_count'] }}
+								</a>
+							</td>
+							<td>
+								<a onclick="get_rel_cases_by_status(2)" style="text-decoration:underline ;">
+									{{ result['report']['case_success_count'] }}
+								</a>
+							</td>
+							<td>
+								<a onclick="get_rel_cases_by_status(3)" style="color:red;text-decoration:underline ;">
+									{{ result['report']['case_failed_count'] }}
+								</a>
+							</td>
+							<td>{{ result['report']['case_waiting_count'] }}</td>
+							<td>{{ result['report']['serial_no'] }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-sm-2">
+				<!-- <div style="position:absolute;right:20px;bottom:-200px;">
+					<button onclick="download({{ result['plan']['plan_id']}})" type="button" class="btn btn-primary" title="下载被测APK">
+						<span class="glyphicon glyphicon-cloud-download">
+					</button>
+				</div> -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title pull-left" style="padding-top: 7.5px;">包含测试用例</h3>
+					<div class="pull-right">
+						<select id="select_case_status" class="rainbow-select">
+							<option value="-1" selected>全部</option>
+							<option value="0">等待</option>
+							<option value="1">执行</option>
+							<option value="2">成功</option>
+							<option value="3">失败</option>
+						</select>
+					</div>
+				</div>
+				<div class="panel-body">
+					<table id="tb_rel_case_list" class="table table-bordered table-hover" style="table-layout:fixed;width:100%;">
+						<thead>
+							<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+								<th style="width:3%;">No.</th>
+								<th style="width:10%;">测试用例名称</th>
+								<th style="width:8%;">测试用例ID</th>
+								<!-- <th style="width:10%;">测试方法名称</th> -->
+								<th style="width:10%;">所属模块</th>
+								<th style="width:8%;">开始时间</th>
+								<th style="width:8%;">结束时间</th>
+								<th style="width:7%;">持续时间</th>
+								<th style="width:4%;">状态</th>
+								<th style="width:26%;">错误信息</th>
+								<th style="width:6%;">截屏</th>
+								<th style="width:10%;">分析结果</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+					<div id="rel_case_pagination" class="pagination">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_report_detail();
+});
+</script>
+{% end %}
+

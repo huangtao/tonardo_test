@@ -1,0 +1,306 @@
+{% extends "plan_base.html" %}
+
+{% block body %}
+
+<div class="panel panel-default">
+	<div class="panel-heading clearfix">
+		<h3 class="panel-title pull-left" style="padding-top: 7.5px;">升级测试计划【{{ result['plan']['plan_name'] }}】详情</h3>
+		<div style="float:right;">
+			<button onclick="click_a('plan/index')" type="button" class="btn btn-primary">返回</button>&nbsp;
+			<button onclick="del_plan()" type="button" class="btn btn-primary">删除</button>&nbsp;
+			<button onclick="to_modify_plan(2)" type="button" class="btn btn-primary">修改</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">名称</label>
+					<div class="col-sm-10">
+						<input id="txt_plan_name" type="text" class="form-control" value="{{ result['plan']['plan_name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">所属工作室</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input id="txt_product_name" type="text" class="form-control" value="{{ result['plan']['product_name'] }}" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">所属项目</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input id="txt_project_name" type="text" class="form-control" value="{{ result['plan']['project_name'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">创建者</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input type="text" class="form-control" value="{{ result['plan']['creator'] }}" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">当前状态</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+						{% if result['plan']['status'] == 2 %}
+							<input id="txt_status" type="text" class="form-control" value="空闲" disabled>
+						{% elif result['plan']['status'] == 1 %}
+							<input id="txt_status" type="text" class="form-control" value="正在执行" disabled>
+						{% elif result['plan']['status'] == 0 %}
+							<input id="txt_status" type="text" class="form-control" value="等待执行" disabled>
+						{% end %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">项目类型</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+						{% if result['plan']['appium_type'] == 1 %}
+							<input type="text" class="form-control" value="原生" disabled>
+						{% elif result['plan']['appium_type'] == 2 %}
+							<input type="text" class="form-control" value="LUA" disabled>
+						{% end %}
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">运行环境</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+					{% if result['plan']['env_type'] == 1 %}
+						<input type="text" class="form-control" value="测试环境" disabled>
+					{% elif result['plan']['env_type'] == 2 %}
+						<input type="text" class="form-control" value="正式环境" disabled>
+					{% elif result['plan']['env_type'] == 3 %}
+						<input type="text" class="form-control" value="预发布环境" disabled>
+					{% end %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">收件人</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['tos'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">执行方式</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['plan']['execute_str'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">待升级APK</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['plan']['apk_name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">升级包</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['plan']['package_name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right"></label>
+					<label class="col-sm-10 control-label text-left">{{ result['plan']['apk_desc'] }}</label>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right"></label>
+					<label class="col-sm-10 control-label text-left">{{ result['plan']['package_desc'] }}</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">创建日期</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input type="text" class="form-control" value="{{ result['plan']['create_date'] }}" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">修改日期</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input type="text" class="form-control" value="{{ result['plan']['update_date'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">用例个数</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input type="text" class="form-control" value="{{ result['plan']['case_count'] }}" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">运行次数</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input type="text" class="form-control" value="{{ result['plan']['run_times'] }}" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label class="col-sm-1 control-label text-right">描述</label>
+					<div class="col-sm-10">
+						<input id="txt_desc" type="text" class="form-control" value="{{ result['plan']['desc'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		
+		<div class="row">
+			<ul class="nav nav-tabs">
+				<li>
+					<a href="#case_info" data-toggle="tab">包含测试用例</a>
+				</li>
+				<li class="active">
+					<a href="#result_info" data-toggle="tab">测试报告</a>
+				</li>
+			</ul>
+			<br/>
+			<div class="tab-content">
+				<div id="case_info" class="tab-pane fade">
+					<table id="tb_rel_case_list" class="table table-bordered table-hover">
+						<thead>
+							<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+								<th>No.</th>
+								<th>测试用例名称</th>
+								<th>所属模块</th>
+								<th>逻辑ID</th>
+								<th>参数</th>
+								<th>方法名称</th>
+								<th>描述</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% if len(result['case_list']) == 0 %}
+						<tr>
+							<td colspan="7">没有任何数据</td>
+						</tr>
+						{% else %}
+						{% set i = 0 %}
+						{% for case in result['case_list'] %}
+						<tr>
+							{% set i = i + 1 %}
+							<td>{{ i }}</td>
+						    <td>{{ case['case_name'] }}</td>
+							<td>{{ case['suite_name'] }}</td>
+							<td>{{ case['logic_id'] }}</td>
+							<td>{{ case['parameter'] }}</td>
+							<td>{{ case['method'] }}</td>
+							<td>{{ case['desc'] }}</td>
+						<tr>
+						{% end %}
+						{% end %}
+						</tbody>
+					</table>
+				</div>
+				<div id="result_info" class="tab-pane fade in active">
+					<table id="tb_result_list" class="table table-bordered table-hover">
+						<thead>
+							<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+								<th>No.</th>
+								<th>开始时间</th>
+								<th>结束时间</th>
+								<th>执行结果</th>
+								<th width="50%">详情</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% if len(result['result_list']) == 0 %}
+						<tr>
+							<td colspan="5">没有任何数据</td>
+						</tr>
+						{% else %}
+						{% set i = 0 %}
+						{% for plan_result in result['result_list'] %}
+						<tr>
+							{% set i = i + 1 %}
+							<td>{{ i }}</td>
+						    <td>{{ plan_result['start_time'] }}</td>
+						    <td>{{ plan_result['end_time'] }}</td>
+						    {% if plan_result['status'] == 1 %}
+							    <td>完成</td>
+								<td><a onclick="to_report_detail({{ plan_result['id'] }})">查看测试报告</a></td>
+							{% elif plan_result['status'] == 0 %}
+								<td style="color:#F00;">失败</td>
+								<td style="color:#F00;">{{ plan_result['message'] }}</td>
+							{% elif plan_result['status'] == 2 %}
+								<td>正在执行</td>
+								<td><a onclick="to_report_detail({{ plan_result['id'] }})">进度详情</a></td>
+							{% elif plan_result['status'] == 3 %}
+								<td style="color:#F00;">失败</td>
+								<td style="color:#F00;">执行被停止</td>
+							{% end %}
+						<tr>
+						{% end %}
+						{% end %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% end %}
+{% block bottom %}
+<script>
+$(function(){
+	init_plan_detail();
+});
+</script>
+{% end %}

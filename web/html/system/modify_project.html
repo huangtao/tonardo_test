@@ -1,0 +1,107 @@
+{% extends "system_base.html" %}
+
+{% block body %}
+
+<div class="panel panel-default">
+	<input id="txt_project_id" type="hidden" value="{{ result['project']['id'] }}">
+	<div class="panel-heading clearfix">
+		<h3 class="panel-title pull-left" style="padding-top: 7.5px;">修改项目信息</h3>
+		<div style="float:right;">
+			<button onclick="click_a('system/index#project_info')" type="button" class="btn btn-default">取消</button>&nbsp;
+			<button onclick="modify_project()" type="button" class="btn btn-primary">保存</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">名称</label>
+					<div class="col-sm-10">
+						<input id="txt_project_name" type="text" class="form-control" value="{{ result['project']['name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">所属工作室</label>
+					<div class="col-sm-10">
+						<input id="txt_product_name" type="text" class="form-control" value="{{ result['project']['product_name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">创建者</label>
+					<div class="col-sm-10">
+						<input id="txt_creator" type="text" class="form-control" value="{{ result['project']['creator'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">创建日期</label>
+					<div class="col-sm-10">
+						<input id="txt_create_date" type="text" class="form-control" value="{{ result['project']['create_date'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">SVN URL</label>
+					<div class="col-sm-10">
+						<input id="txt_svn_url" type="text" class="form-control" value="{{ result['project']['svn_url'] }}" >
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">SVN Revision</label>
+					<div class="col-sm-10">
+						<input id="txt_svn_revision" type="text" class="form-control" value="{{ result['project']['svn_revision'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">描述</label>
+					<div class="col-sm-10">
+						<textarea id="txt_project_desc" class="form-control" rows="3" placeholder="项目描述"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="col-sm-offset-2 col-sm-10">
+					<label class="checkbox primary" for="cb_scan_case">
+						<input id="cb_scan_case" type="checkbox" data-toggle="checkbox" required>
+						扫描测试用例
+					</label>
+				</div>
+				<div class="col-sm-offset-2 col-sm-10">
+					<label class="checkbox primary" for="cb_scan_ui">
+						<input id="cb_scan_ui" type="checkbox" data-toggle="checkbox" required>
+						扫描UI Repository
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_modify_project();
+});
+</script>
+{% end %}

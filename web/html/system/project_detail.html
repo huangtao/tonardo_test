@@ -1,0 +1,44 @@
+{% extends "system_base.html" %}
+
+{% block body %}
+
+<div class="panel panel-default">
+	<div class="panel-heading clearfix">
+		<h3 class="panel-title pull-left" style="padding-top: 7.5px;">项目【{{ result['project']['name'] }}】</h3>
+		<div class="btn-group pull-right">
+			<button onclick="click_a('system/index?tab_href=project_info')" type="button" class="btn btn-primary">返回</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a id="tab_project_base" href="#project_base" data-toggle="tab">基本信息</a>
+			</li>
+			<li>
+				<a id="tab_project_ui_repository" href="#project_ui_repository" data-toggle="tab">UI Repository</a>
+			</li>
+			<li>
+				<a id="tab_project_apk" href="#project_apk" data-toggle="tab">APK</a>
+			</li>
+			<li>
+				<a id="tab_project_upgrade_package" href="#project_upgrade_package" data-toggle="tab">升级包</a>
+			</li>
+		</ul>
+		<br/>
+		<div class="tab-content">
+			{% include 'project_base.html' %}
+		   	{% include 'project_ui_repository.html' %}
+		   	{% include 'project_apk.html' %}
+		   	{% include 'project_upgrade_package.html' %}
+		</div>
+	</div>
+</div>
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_project_detail();
+});
+</script>
+{% end %}

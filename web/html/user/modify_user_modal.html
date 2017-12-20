@@ -1,0 +1,40 @@
+<div class="modal fade" id="modal_modify_user" tabindex="-1" role="dialog" aria-labelledby="lb_create_user" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content">
+			<div class="modal-header">
+				修改用户信息
+			</div>
+			<input id="txt_user_id" type="hidden" value="">
+	        <div class="modal-body">
+				<div class="row">
+					<label class="col-sm-3 control-label text-right">用户名</label>
+					<div class="col-sm-9 input-group" style="padding-left:15px;">
+						<input id="txt_user_name" type="text" class="form-control">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right">选择角色</label>
+					<div class="col-sm-9">
+						<select id="select_role_for_modify_modal" class="rainbow-select">
+							<option value="0" selected>选择角色</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right">选择所属工作室</label>
+					<div class="col-sm-9">
+						<select id="select_product_for_modify_modal" class="rainbow-select">
+							<option value="0" selected>选择所属工作室</option>
+						</select>
+					</div>
+				</div>
+	        </div>
+	        <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+	            <button onclick="modify_user()" type="button" class="btn btn-primary">保存</button>
+	        </div>
+	    </div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>{{ escape(handler.settings["title"]) }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="stylesheet" href="{{ static_url('css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ static_url('css/flat-ui.css') }}" />
+    <link rel="stylesheet" href="{{ static_url('css/rainbow/rainbow.css') }}" />
+
+	<script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('js/flat-ui.min.js') }}"></script>
+    <script src="{{ static_url('js/application.js') }}"></script>
+    <script src="{{ static_url('js/Chart.js') }}"></script>
+    <script src="{{ static_url('js/bootstrap-filestyle.js') }}"> </script>
+    <script src="{{ static_url('js/bootstrap-notify.js') }}"></script>
+	<script src="{{ static_url('js/rainbow/rainbow.js') }}"></script>
+	<script src="{{ static_url('js/rainbow/auth.js') }}"></script>
+
+    {% block head %}{% end %}
+</head>
+
+<body>
+	<div style="width: 95%; margin:0 auto;">
+    {% include 'include/header.html' %}
+    <div class="container rainbow_container">
+    	{% block body %}{% end %}
+    	{% include 'user/modify_pwd_modal.html %}
+    </div>
+    {% include 'include/foot.html' %}
+    {% block bottom %}{% end %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "device_base.html" %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="col-sm-2">
+			<div class="input-group">
+				<span class="input-group-addon">名称</span>
+				<input id="txt_condition_name" type="text" class="form-control" placeholder="名称">
+			</div>
+		</div>
+
+		<div class="col-sm-2">
+			<div class="input-group">
+				<span class="input-group-addon">序列号</span>
+				<input id="txt_condition_sn" type="text" class="form-control" placeholder="序列号">
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<select id="select_os" class="rainbow-select">
+				<option value="0" selected>选择操作系统</option>
+				<option value="1">Android</option>
+				<option value="2">iOS</option>
+			</select>
+		</div>
+		<div class="btn-group">
+			<button id="btn_search" onclick="search()" type="button" class="btn btn-primary"><span class="fui-search"></button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<table id="tb_device_list" class="table table-bordered table-hover">
+			<thead>
+				<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+					<th style="width:3%;">No.</th>
+					<th>名称</th>
+					<th>序列号</th>
+					<th>操作系统</th>
+					<th>创建时间</th>
+					<th>修改时间</th>
+					<th>用途</th>
+					<th>状态</th>
+					<th>描述</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div id="device_pagination" class="pagination">
+		</div>
+	</div>
+</div>
+
+{% include 'modify_modal.html' %}
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_index();
+});
+</script>
+{% end %}

@@ -1,0 +1,152 @@
+{% extends "plan_base.html" %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="col-sm-2">
+			<select id="select_product" class="rainbow-select">
+				<option value="0" selected>选择所属工作室</option>
+				{% for product in result['product_list'] %}
+				<option value="{{ product['id'] }}">{{ product['name'] }}</option>
+				{% end %}
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select id="select_project" class="rainbow-select">
+				<option value="0" selected>选择所属项目</option>
+			</select>
+		</div>
+		<div class="btn-group">
+			<button id="btn_search" onclick="get_plans()" type="button" class="btn btn-primary"><span class="fui-search"></button>
+		</div>
+		
+		<div style="float:right;">
+			<div class="btn-group">
+				<button class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">
+					新建<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-inverse" role="menu">
+					<li><a onclick="to_create_function_plan()">新建功能测试计划</a></li>
+					<li><a onclick="to_create_upgrade_plan()">新建升级测试计划</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="col-sm-4" style="float:right;"></div>
+		<div class="col-sm-2" style="float:right;">
+			<label class="checkbox primary">
+				<input id="cb_only_for_me" type="checkbox" data-toggle="checkbox" required>
+				只显示我创建的测试计划
+			</label>
+		</div>
+	</div>
+	<div class="panel-body">
+		<table id="tb_plan_list" class="table table-bordered table-hover" style="table-layout:fixed;width:100%;">
+			<thead>
+				<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+					<!-- <th style="width:1%;"><input id="cb_plans" type="checkbox"></th> -->
+					<th style="width:3%;">ID</th>
+					<th style="width:20%;">名称</th>
+					<th style="width:8%;">类型</th>
+					<th style="width:8%;">所属工作室</th>
+					<th style="width:8%;">所属项目</th>
+					<th style="width:6%;">版本</th>
+					<!-- <th style="width:8%;">创建者</th> -->
+					<!-- <th style="width:8%;">创建时间</th> -->
+					<th style="width:8%;">更新时间</th>
+					<th style="width:5%;">测试用例个数</th>
+					<!-- <th style="width:4%;">运行次数</th> -->
+					<th style="width:8%;">当前状态</th>
+					<!-- <th style="width:4%;">Device</th> -->
+					<th>描述</th>
+					<th style="width:8%;">操作</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% if len(result['plan_list']) == 0 %}
+				<tr>
+					<td colspan="11">没有任何数据</td>
+				</tr>
+				{% else %}
+				{% set i = 0 %}
+				{% for plan in result['plan_list'] %}
+				<tr>
+					
+					{% set i = i + 1 %}
+					<!-- <td><input id="cb_plan_{{ plan['plan_id'] }}" type="checkbox"></td> -->
+					<!-- <td>{{ i }}</td> -->
+					<td>{{ plan['plan_id'] }}</td>
+					<td style="word-wrap:break-word;"><a id="plan_{{ plan['plan_id'] }}">{{ plan['plan_name'] }}</a></td>
+					{% if plan['plan_type'] == 1 %}<!-- 功能测试计划 -->
+						<td>功能测试</td>
+					{% elif plan['plan_type'] == 2 %}<!-- 升级测试计划 -->
+						<td>升级测试</td>
+					{% end %}
+				    <td>{{ plan['product_name'] }}</td>
+					<td>{{ plan['project_name'] }}</td>
+					<td>{{ plan['svn_version'] }}</td>
+					<!-- <td>{{ plan['creator'] }}</td> -->
+					<!-- <td>{{ plan['create_date'] }}</td> -->
+					<td>{{ plan['update_date'] }}</td>
+					<td>{{ plan['case_count'] }}</td>
+					<!-- <td>{{ plan['run_times'] }}</td> -->
+					{% if plan['status'] == 1 %}<!-- 1：正在执行 -->
+						<td>
+							<!-- <div class="progress progress-striped active">
+							   <div class="progress-bar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;padding-left: 15px;">
+							   </div>
+							</div> -->
+							<span style="color:#34495E">共:{{ plan['progress']['total'] }}</span>&nbsp;
+							<span style="color:#1ABC9C">成功:{{ plan['progress']['success'] }}</span>&nbsp;
+							<span style="color:#E74C3C">失败:{{ plan['progress']['failed'] }}</span>&nbsp;
+							<span style="color:#95A5A6">等待:{{ plan['progress']['waiting'] }}</span><br/>
+							{% if plan['report_id'] != 0 %}
+							<a onclick="to_report_detail({{ plan['report_id'] }})">进度详情</a>
+							{% end %}
+						</td>
+					{% elif plan['status'] == 2 %}<!-- 2：空闲 -->
+						<td>空闲</td>
+					{% elif plan['status'] == 0 %}<!-- 0：等待执行 -->
+						<td>等待执行</td>
+					{% end %}
+					<!-- <td>{{ plan['device_name'] }}</td> -->
+					<td style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;" title="{{ plan['desc'] }}">{{ plan['desc'] }}</td>
+					{% if plan['status'] == 2 %}<!-- 2：空闲 -->
+						<!-- <td><button onclick="execute_plan({{ plan['plan_id'] }})" type="button" class="btn btn-primary">立即执行</button></td> -->
+						<td>
+							<button onclick="execute_plan({{ plan['plan_id'] }})" type="button" class="btn btn-xs btn-primary"title="立即执行">
+								<span class="glyphicon glyphicon-play"></span>
+							</button>
+						</td>
+					{% elif plan['status'] == 1 %}<!-- 1：正在执行 -->
+						<!-- <td><button onclick="stop_plan({{ plan['plan_id'] }}, {{ plan['report_id'] }})" type="button" class="btn btn-primary">停止执行</button></td> -->
+						<td>
+							<button onclick="stop_plan({{ plan['plan_id'] }}, {{ plan['report_id'] }})" type="button" class="btn btn-xs btn-primary" title="停止执行">
+								<span class="glyphicon glyphicon-stop"></span>
+							</button>
+						</td>
+					{% elif plan['status'] == 0 %}<!-- 0：等待执行 -->
+						<!-- <td><button onclick="cancel_execute_plan({{ plan['plan_id'] }})" type="button" class="btn btn-primary">取消执行</button></td> -->
+						<td>
+							<button onclick="cancel_execute_plan({{ plan['plan_id'] }})" type="button" class="btn btn-xs btn-primary" title="取消执行">
+								<span class="glyphicon glyphicon-stop"></span>
+							</button>
+						</td>
+					{% end %}
+				<tr>
+				{% end %}
+				{% end %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_index();
+});
+</script>
+{% end %}

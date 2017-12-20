@@ -1,0 +1,789 @@
+2017-12-18 12:20:15 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 12:20:16 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 12:20:16 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 12:26:08 main.py methed:post line:39 DEBUG - param = index
+2017-12-18 12:26:09 main.py methed:post line:39 DEBUG - param = init_index
+2017-12-18 12:26:10 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:10 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:10 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:15 case.py methed:post line:34 DEBUG - param = to_suite_detail
+2017-12-18 12:26:15 case.py methed:post line:34 DEBUG - param = get_cases
+2017-12-18 12:26:15 case.py methed:get_cases line:149 DEBUG - {'cur_page': 1, 'suite_id': '1'}
+2017-12-18 12:26:18 case.py methed:post line:34 DEBUG - param = get_cases
+2017-12-18 12:26:18 case.py methed:get_cases line:149 DEBUG - {'cur_page': 2, 'suite_id': 1}
+2017-12-18 12:26:18 case.py methed:post line:34 DEBUG - param = get_cases
+2017-12-18 12:26:18 case.py methed:get_cases line:149 DEBUG - {'cur_page': 2, 'suite_id': 1}
+2017-12-18 12:26:19 case.py methed:post line:34 DEBUG - param = get_cases
+2017-12-18 12:26:19 case.py methed:get_cases line:149 DEBUG - {'cur_page': 3, 'suite_id': 1}
+2017-12-18 12:26:21 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:21 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:21 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:22 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:22 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:22 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:23 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:23 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:23 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:24 plan.py methed:post line:31 DEBUG - param = index
+2017-12-18 12:26:24 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:24 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:24 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:25 plan.py methed:post line:31 DEBUG - param = index
+2017-12-18 12:26:26 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:26 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:26 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:26 plan.py methed:post line:31 DEBUG - param = index
+2017-12-18 12:26:26 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:27 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:27 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:27 plan.py methed:post line:31 DEBUG - param = index
+2017-12-18 12:26:27 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:27 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:28 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:28 plan.py methed:post line:31 DEBUG - param = index
+2017-12-18 12:26:28 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:28 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:29 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 12:26:40 case.py methed:post line:34 DEBUG - param = to_suite_detail
+2017-12-18 12:26:40 case.py methed:post line:34 DEBUG - param = get_cases
+2017-12-18 12:26:40 case.py methed:get_cases line:149 DEBUG - {'cur_page': 1, 'suite_id': '5'}
+2017-12-18 12:26:42 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 12:26:42 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 12:26:42 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 14:31:41 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 14:31:42 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 14:31:42 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 14:40:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 14:40:50 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 14:40:50 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 14:41:10 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 14:43:10 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 14:43:13 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 14:44:25 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 14:44:25 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 14:44:26 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 14:44:31 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 14:44:32 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 14:44:32 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 14:44:39 case.py methed:post line:34 DEBUG - param = get_suites_by_project_id
+2017-12-18 14:44:39 case.py methed:get_suites_by_project_id line:165 DEBUG - {'project_id': '28'}
+2017-12-18 15:01:17 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:01:17 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:01:17 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:01:19 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:01:20 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:01:20 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:01:25 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:01:26 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:01:26 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:01:31 case.py methed:post line:34 DEBUG - param = get_suites_by_project_id
+2017-12-18 15:01:31 case.py methed:get_suites_by_project_id line:165 DEBUG - {'project_id': '28'}
+2017-12-18 15:02:16 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:02:17 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:02:17 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:02:18 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:02:19 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:02:19 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:02:20 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:02:20 case.py methed:scan_cases line:86 DEBUG - {'project_id': {'context': {'jQuery111108612049948752962': 1, 'location': {'href': 'http://172.20.108.36:8080/case/index', 'port': '8080', 'search': '', 'hostname': '172.20.108.36', 'hash': '', 'origin': 'http://172.20.108.36:8080', 'ancestorOrigins': {}, 'pathname': '/case/index', 'protocol': 'http:', 'host': '172.20.108.36:8080'}}, '0': {'0': {}, 'jQuery111108612049948752962': 27, '2': {}, '1': {}}, 'selector': '#select_project', 'length': 1}, 'version_id': {'context': {'jQuery111108612049948752962': 1, 'location': {'href': 'http://172.20.108.36:8080/case/index', 'port': '8080', 'search': '', 'hostname': '172.20.108.36', 'hash': '', 'origin': 'http://172.20.108.36:8080', 'ancestorOrigins': {}, 'pathname': '/case/index', 'protocol': 'http:', 'host': '172.20.108.36:8080'}}, '0': {'0': {}}, 'selector': '#select_version', 'length': 1}}
+2017-12-18 15:02:20 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:10:20 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:10:20 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:10:20 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:10:23 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:10:23 case.py methed:scan_cases line:86 DEBUG - {'project_id': {'context': {'jQuery111103290060092010769': 1, 'location': {'href': 'http://172.20.108.36:8080/case/index', 'port': '8080', 'search': '', 'hostname': '172.20.108.36', 'hash': '', 'origin': 'http://172.20.108.36:8080', 'ancestorOrigins': {}, 'pathname': '/case/index', 'protocol': 'http:', 'host': '172.20.108.36:8080'}}, '0': {'0': {}, '2': {}, 'jQuery111103290060092010769': 27, '1': {}}, 'selector': '#select_project', 'length': 1}, 'version_id': {'context': {'jQuery111103290060092010769': 1, 'location': {'href': 'http://172.20.108.36:8080/case/index', 'port': '8080', 'search': '', 'hostname': '172.20.108.36', 'hash': '', 'origin': 'http://172.20.108.36:8080', 'ancestorOrigins': {}, 'pathname': '/case/index', 'protocol': 'http:', 'host': '172.20.108.36:8080'}}, '0': {'0': {}}, 'selector': '#select_version', 'length': 1}}
+2017-12-18 15:10:23 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:11:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:11:49 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:11:50 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:11:51 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:11:52 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:11:52 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:11:54 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:11:54 case.py methed:scan_cases line:86 DEBUG - {'version_id': {'context': {'location': {'port': '8080', 'pathname': '/case/index', 'protocol': 'http:', 'host': '172.20.108.36:8080', 'href': 'http://172.20.108.36:8080/case/index', 'hostname': '172.20.108.36', 'ancestorOrigins': {}, 'search': '', 'hash': '', 'origin': 'http://172.20.108.36:8080'}, 'jQuery111106787098817205477': 1}, '0': {'0': {}}, 'length': 1, 'selector': '#select_version'}, 'project_id': '0'}
+2017-12-18 15:11:54 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:12:40 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:12:40 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:12:41 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:12:43 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:12:44 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:12:44 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:12:45 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:12:45 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0'}
+2017-12-18 15:12:45 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:13:21 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:13:21 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:13:21 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:13:23 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:13:24 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:13:24 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:13:25 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:13:25 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0'}
+2017-12-18 15:13:25 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:14:26 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:14:27 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:14:27 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:14:45 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:14:46 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:14:46 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:14:52 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:14:53 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:14:53 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:14:54 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:14:54 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 15:14:54 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:17:13 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:17:14 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:17:14 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:17:29 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:17:37 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:17:49 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 15:20:39 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:25:08 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:25:09 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:25:09 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:25:19 case.py methed:post line:34 DEBUG - param = index
+2017-12-18 15:25:19 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-18 15:25:44 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-18 15:25:54 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:26:35 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 15:26:36 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:26:59 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:26:59 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:27:00 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 15:27:05 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 15:27:09 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 15:29:34 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 15:57:21 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 15:57:22 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 15:57:22 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:02:06 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:02:11 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:05:27 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:05:28 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:05:28 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:05:49 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:05:54 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:06:36 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:06:36 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:06:37 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:06:49 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:06:54 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:07:18 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(self)
+TypeError: scan_cases() takes from 1 to 2 positional arguments but 3 were given
+
+2017-12-18 16:07:18 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:14:37 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:14:38 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:14:38 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:17:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:17:08 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:21:03 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:21:04 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:21:04 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:21:22 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:21:26 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:22:08 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:22:08 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:22:09 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:22:37 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:22:40 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:22:59 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:22:59 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:22:59 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:24:55 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:24:56 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:24:56 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:25:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:25:07 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:25:23 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    utils.checkout(self.cfg_helper.get_value("svn","svn_base_url"), constant.test_case)
+TypeError: get_value() missing 1 required positional argument: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 79, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 72, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:28:08 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:28:09 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:28:09 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:29:25 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:29:28 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:30:01 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/常规项目 D:/pythonworkspace/tornadotest/src/testcase --username LucyLiu --password lly0000AA
+2017-12-18 16:30:06 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 16:38:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:38:10 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:38:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:39:28 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:39:28 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:39:29 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:39:35 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:39:40 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:41:27 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:41:28 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:41:28 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:41:36 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:41:40 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:42:04 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    dest_path = os.sep.join(constant.test_case,'常规项目')
+TypeError: join() takes exactly one argument (2 given)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 81, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 74, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:43:04 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:43:05 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:43:05 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:43:15 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:43:19 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:43:45 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/ D:/pythonworkspace/tornadotest/src/testcase/常规项目 --username LucyLiu --password lly0000AA
+2017-12-18 16:44:03 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 16:44:33 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:44:33 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:44:33 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:45:45 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:45:46 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:45:46 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:45:47 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:45:47 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:45:47 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/\常规项目 D/:///p/y/t/h/o/n/w/o/r/k/s/p/a/c/e///t/o/r/n/a/d/o/t/e/s/t///s/r/c///t/e/s/t/c/a/s/e --username LucyLiu --password lly0000AA
+2017-12-18 16:45:48 utils.py methed:popen line:194 DEBUG - retval = 1
+2017-12-18 16:45:48 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:45:48 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:45:48 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:46:06 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:46:06 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:46:07 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:46:08 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:46:08 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:46:08 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/\常规项目 D/:///p/y/t/h/o/n/w/o/r/k/s/p/a/c/e///t/o/r/n/a/d/o/t/e/s/t///s/r/c///t/e/s/t/c/a/s/e --username LucyLiu --password lly0000AA
+2017-12-18 16:46:08 utils.py methed:popen line:194 DEBUG - retval = 1
+2017-12-18 16:46:08 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:46:08 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:46:08 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:46:22 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:46:23 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:46:23 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:46:27 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:46:27 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:46:27 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/\常规项目 D/:///p/y/t/h/o/n/w/o/r/k/s/p/a/c/e///t/o/r/n/a/d/o/t/e/s/t///s/r/c///t/e/s/t/c/a/s/e --username LucyLiu --password lly0000AA
+2017-12-18 16:46:27 utils.py methed:popen line:194 DEBUG - retval = 1
+2017-12-18 16:46:27 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:46:27 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:46:27 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:48:08 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:48:08 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:48:09 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:48:12 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:48:12 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:48:12 utils.py methed:popen line:187 DEBUG - command = svn checkout  D/:///p/y/t/h/o/n/w/o/r/k/s/p/a/c/e///t/o/r/n/a/d/o/t/e/s/t///s/r/c///t/e/s/t/c/a/s/e --username LucyLiu --password lly0000AA
+2017-12-18 16:48:13 utils.py methed:popen line:194 DEBUG - retval = 1
+2017-12-18 16:48:13 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:48:13 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:48:13 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:48:52 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:48:52 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:48:53 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:48:59 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:49:06 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:49:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:49:49 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:49:50 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:49:58 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:50:00 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:50:22 utils.py methed:popen line:187 DEBUG - command = svn checkout  D:/pythonworkspace/tornadotest/src/testcase --username LucyLiu --password lly0000AA
+2017-12-18 16:50:23 utils.py methed:popen line:194 DEBUG - retval = 1
+2017-12-18 16:50:55 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:50:55 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:50:55 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:51:27 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:51:27 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:51:28 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:51:36 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:51:40 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:52:18 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:52:18 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:52:19 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:52:26 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:52:27 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:52:27 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:52:42 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:52:45 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 16:52:59 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/常规项目 D:/pythonworkspace/tornadotest/src/testcase --username LucyLiu --password lly0000AA
+2017-12-18 16:53:06 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 16:53:11 testcase_manager.py methed:scan_cases line:84 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+2017-12-18 16:53:14 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 76, in scan_cases
+    version_objs = self.__get_svn_version(project['id'])
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:53:16 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 16:54:57 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:54:58 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:54:58 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:55:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:55:06 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:55:22 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    dest_path = os.path.join([constant.test_case, '常规项目'])
+  File "D:\Python34\lib\ntpath.py", line 108, in join
+    result_drive, result_path = splitdrive(path)
+  File "D:\Python34\lib\ntpath.py", line 161, in splitdrive
+    normp = p.replace(_get_altsep(p), sep)
+AttributeError: 'list' object has no attribute 'replace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 81, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 74, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 16:56:21 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 16:56:22 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 16:56:22 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 16:57:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 16:57:06 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 16:57:25 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/常规项目 D:/pythonworkspace/tornadotest/src/testcase/常规项目 --username LucyLiu --password lly0000AA
+2017-12-18 16:57:30 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 17:52:54 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 17:52:54 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 17:52:55 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 17:53:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 17:53:10 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 17:53:25 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 17:53:25 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 17:53:36 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    restr = utils.popen(cmd='svn list', path=dest_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\common\utils.py", line 191, in popen
+    cwd=path)
+  File "D:\Python34\lib\subprocess.py", line 848, in __init__
+    restore_signals, start_new_session)
+  File "D:\Python34\lib\subprocess.py", line 1104, in _execute_child
+    startupinfo)
+  File "D:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.3\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 425, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+NotADirectoryError: [WinError 267] 目录名称无效。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 80, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 17:53:56 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 17:53:57 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 17:53:57 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 17:54:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 17:54:06 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 17:54:12 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 17:54:12 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 17:54:18 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    restr = utils.popen(cmd='svn list', path=dest_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\common\utils.py", line 191, in popen
+    cwd=path)
+  File "D:\Python34\lib\subprocess.py", line 848, in __init__
+    restore_signals, start_new_session)
+  File "D:\Python34\lib\subprocess.py", line 1104, in _execute_child
+    startupinfo)
+  File "D:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.3\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 425, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+NotADirectoryError: [WinError 267] 目录名称无效。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 80, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 17:54:21 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 17:55:25 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 17:55:26 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 17:55:26 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 17:55:32 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 17:55:35 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 17:55:42 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 17:55:42 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 17:55:56 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 17:55:57 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 17:55:57 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 17:56:05 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 17:56:10 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 17:56:23 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 17:56:28 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 17:56:40 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    restr = utils.popen(cmd='svn list', path=dest_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\common\utils.py", line 191, in popen
+    cwd=path)
+  File "D:\Python34\lib\subprocess.py", line 848, in __init__
+    restore_signals, start_new_session)
+  File "D:\Python34\lib\subprocess.py", line 1104, in _execute_child
+    startupinfo)
+  File "D:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.3\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 425, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+NotADirectoryError: [WinError 267] 目录名称无效。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 87, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 80, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 17:57:03 base.py methed:write_error line:117 ERROR - status_code = 500
+2017-12-18 18:00:34 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 18:00:35 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 18:00:35 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 18:02:26 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 18:02:30 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 18:02:40 case.py methed:scan_cases line:96 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 66, in scan_cases
+    if not os.path.exsit(dest_path):
+AttributeError: 'module' object has no attribute 'exsit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 93, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 89, in scan_cases
+    raise ex
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-18 18:05:33 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 18:05:33 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 18:05:33 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 18:05:39 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 18:05:42 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 18:05:52 utils.py methed:popen line:187 DEBUG - command = svn checkout http://svn.oa.com:24399/testcase/常规项目 D:/pythonworkspace/tornadotest/src/testcase/常规项目 --username LucyLiu --password lly0000AA
+2017-12-18 18:05:58 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 18:06:16 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 18:06:16 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 18:06:16 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 18:06:20 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 18:06:23 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 18:06:29 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 18:06:29 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 18:06:30 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 18:06:50 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-18 18:07:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 18:07:10 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 18:07:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 18:07:19 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 18:07:25 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 18:07:31 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 18:07:31 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 18:07:31 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 18:08:32 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 18:08:33 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 18:08:33 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 18:08:38 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 18:08:42 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-18 18:08:48 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 18:08:48 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 18:08:49 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 18:08:50 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-18 18:08:53 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 18:08:53 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 18:08:53 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 18:11:43 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-18 18:11:44 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-18 18:11:44 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-18 18:11:56 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-18 18:12:01 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-18 18:12:14 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 18:12:14 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 18:12:14 utils.py methed:popen line:194 DEBUG - retval = 0
+2017-12-18 18:12:18 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-18 18:12:22 utils.py methed:popen line:187 DEBUG - command = svn list
+2017-12-18 18:12:22 utils.py methed:popen line:189 DEBUG - path = D:\pythonworkspace\tornadotest\src\testcase\常规项目
+2017-12-18 18:12:22 utils.py methed:popen line:194 DEBUG - retval = 0

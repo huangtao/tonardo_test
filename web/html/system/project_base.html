@@ -1,0 +1,82 @@
+<div id="project_base" class="tab-pane fade in active">
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">名称</label>
+					<div class="col-sm-10" style="padding-right:0px;padding-left:0px;">
+						<input id="txt_project_name" type="text" class="form-control" value="{{ result['project']['name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">所属工作室</label>
+					<div class="col-sm-10" style="padding-right:0px;padding-left:0px;">
+						<input id="txt_product_name" type="text" class="form-control" value="{{ result['project']['product_name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">创建者</label>
+					<div class="col-sm-10" style="padding-right:0px;padding-left:0px;">
+						<input id="txt_creator" type="text" class="form-control" value="{{ result['project']['creator'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">创建日期</label>
+					<div class="col-sm-10" style="padding-right:0px;padding-left:0px;">
+						<input id="txt_create_date" type="text" class="form-control" value="{{ result['project']['create_date'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">SVN URL</label>
+					<div class="col-sm-10 input-group">
+						<input id="txt_svn_url" type="text" class="form-control" value="{{ result['project']['svn_url'] }}" disabled>
+						<!-- <input id="txt_svn_url" type="text" class="form-control" value="{{ result['project']['svn_url'] }}" style="color:#000000;" readonly>
+						<span id="edit_svn_url" class="input-group-addon" style="border-color:#1abc9c;background-color:#1abc9c;">
+							<i class="glyphicon glyphicon-pencil"></i>
+						</span> -->
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">SVN Revision</label>
+					<div class="col-sm-10" style="padding-right:0px;padding-left:0px;">
+						<input id="txt_svn_revision" type="text" class="form-control" value="{{ result['project']['svn_revision'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label class="col-sm-1 control-label text-right">描述</label>
+					<div class="col-sm-10 input-group" style="padding-right:0px;padding-left:0px;">
+						<input id="txt_desc" type="text" class="form-control" value="{{ result['project']['desc'] }}" style="color:#000000;" readonly>
+						<span id="edit_desc" class="input-group-addon" style="border-color:#1abc9c;background-color:#1abc9c;">
+							<i class="glyphicon glyphicon-pencil"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

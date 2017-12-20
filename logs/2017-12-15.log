@@ -1,0 +1,59 @@
+2017-12-15 18:30:47 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-15 18:30:47 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-15 18:30:48 device_manager.py methed:get_device line:114 DEBUG - select * from device where 1=1  and serial_no = %s 
+2017-12-15 18:30:48 device_manager.py methed:get_device line:115 DEBUG - ['R3E4C16B26009686']
+2017-12-15 18:30:48 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-15 18:31:09 case.py methed:post line:34 DEBUG - param = index
+2017-12-15 18:31:56 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-15 18:31:57 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-15 18:31:57 device_manager.py methed:get_device line:114 DEBUG - select * from device where 1=1  and serial_no = %s 
+2017-12-15 18:31:57 device_manager.py methed:get_device line:115 DEBUG - ['R3E4C16B26009686']
+2017-12-15 18:31:57 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-15 18:32:03 case.py methed:post line:34 DEBUG - param = index
+2017-12-15 18:32:25 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-15 18:32:25 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-15 18:32:26 device_manager.py methed:get_device line:114 DEBUG - select * from device where 1=1  and serial_no = %s 
+2017-12-15 18:32:26 device_manager.py methed:get_device line:115 DEBUG - ['R3E4C16B26009686']
+2017-12-15 18:32:26 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-15 18:32:27 case.py methed:post line:34 DEBUG - param = index
+2017-12-15 18:32:28 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-15 18:32:28 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-15 18:34:23 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-15 18:34:23 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-15 18:34:23 device_manager.py methed:get_device line:114 DEBUG - select * from device where 1=1  and serial_no = %s 
+2017-12-15 18:34:23 device_manager.py methed:get_device line:115 DEBUG - ['R3E4C16B26009686']
+2017-12-15 18:34:24 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-15 18:34:29 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-15 18:34:30 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-15 18:34:30 device_manager.py methed:get_device line:114 DEBUG - select * from device where 1=1  and serial_no = %s 
+2017-12-15 18:34:30 device_manager.py methed:get_device line:115 DEBUG - ['R3E4C16B26009686']
+2017-12-15 18:34:30 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-15 18:34:32 case.py methed:post line:34 DEBUG - param = index
+2017-12-15 18:34:33 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-15 18:34:33 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-15 18:37:46 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-15 18:37:46 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-15 18:37:47 device_manager.py methed:get_device line:114 DEBUG - select * from device where 1=1  and serial_no = %s 
+2017-12-15 18:37:47 device_manager.py methed:get_device line:115 DEBUG - ['R3E4C16B26009686']
+2017-12-15 18:37:47 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-15 18:37:49 case.py methed:post line:34 DEBUG - param = index
+2017-12-15 18:37:49 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-15 18:37:49 testcase_manager.py methed:count_suite line:273 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 

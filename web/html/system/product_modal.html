@@ -1,0 +1,56 @@
+<div class="modal fade" id="modal_product" tabindex="-1" role="dialog" aria-labelledby="lb_create_product" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content">
+			<div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <span id="title"></span>
+			</div>
+	        <div class="modal-body">
+	        	<!-- <div class="row">
+					<div id="alert_danger_for_product" class="alert alert-danger"></div>
+					<div id="alert_warning_for_product" class="alert alert-warning"></div>
+	        	</div> -->
+				<div class="row">
+					<label class="col-sm-3 control-label text-right">工作室名称</label>
+					<div class="col-sm-9">
+						<input id="txt_product_name" type="text" class="form-control rainbow-input" placeholder="工作室名称">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right">SVN对应工作室</label>
+					<div class="col-sm-9">
+						<!--<select id="select_svn_product" class="rainbow-select">-->
+							<!--<option value="0" selected>选择SVN对应工作室</option>-->
+							<!--{% set i = 1 %}-->
+							<!--{% for path in result['path_list'] %}-->
+							<!--<option value="{{ i }}">{{ path }}</option>-->
+							<!--{% set i = i + 1 %}-->
+							<!--{% end %}-->
+						<input id="txt_svn_url" type="text" class="form-control" placeholder="选择SVN对应项目">
+						<!--</select>-->
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right">工作室描述</label>
+					<div class="col-sm-9">
+						<textarea id="txt_product_desc" class="form-control rainbow-input" rows="3" placeholder="工作室描述"></textarea>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div id="progress_bar_for_product" class="progress progress-striped active">
+					   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;padding-left: 15px;">
+					   </div>
+					</div>
+				</div>
+	        </div>
+	        <div class="modal-footer">
+	        	<input id="txt_product_id" type="hidden" value="0">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+	            <button onclick="save_product()" type="button" class="btn btn-primary">保存</button>
+	        </div>
+	    </div>
+	</div>
+</div>

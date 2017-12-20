@@ -1,0 +1,54 @@
+<div class="modal fade" id="modal_modify_device" tabindex="-1" role="dialog" aria-labelledby="lb_modify_device" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				修改Device
+			</div>
+	        <div class="modal-body">
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_email">名称</label>
+					<div class="col-sm-9 input-group" style="padding-left:15px;">
+						<input id="txt_name" type="text" class="form-control" disabled>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_email">序列号</label>
+					<div class="col-sm-9 input-group" style="padding-left:15px;">
+						<input id="txt_sn" type="text" class="form-control" disabled>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_email">操作系统</label>
+					<div class="col-sm-9 input-group" style="padding-left:15px;">
+						<input id="txt_os" type="text" class="form-control" disabled>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="select_use">用途</label>
+					<div class="col-sm-9">
+						<select id="select_use" class="rainbow-select">
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_decs">描述</label>
+					<div class="col-sm-9">
+						<textarea id="txt_desc" class="form-control" rows="3" placeholder="描述"></textarea>
+					</div>
+				</div>
+				<br/>
+
+	        </div>
+	        <div class="modal-footer">
+	            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	            <input id="txt_device_id" type="hidden">
+	            <button onclick="modify_device()" type="button" class="btn btn-primary">保存</button>
+	        </div>
+	    </div>
+	</div>
+</div>

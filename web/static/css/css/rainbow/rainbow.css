@@ -1,0 +1,138 @@
+a{
+	cursor: pointer;
+}
+
+input[type="text"][disabled]{
+	color:#000000;
+}
+
+.rainbow_container {
+	width: 100%;
+}
+
+.canvas-holder {
+    width: 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+#chartjs-tooltip.below {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+#chartjs-tooltip.below:before {
+    border: solid;
+    border-color: #111 transparent;
+    border-color: rgba(0, 0, 0, .8) transparent;
+    border-width: 0 8px 8px 8px;
+    bottom: 1em;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+}
+
+#chartjs-tooltip.above {
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+}
+
+#chartjs-tooltip.above:before {
+    border: solid;
+    border-color: #111 transparent;
+    border-color: rgba(0, 0, 0, .8) transparent;
+    border-width: 8px 8px 0 8px;
+    bottom: 1em;
+    content: "";
+    display: block;
+    left: 50%;
+    top: 100%;
+    position: absolute;
+    z-index: 99;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.rainbow-input {
+	border: 2px solid #1abc9c;
+}
+
+.rainbow-select {
+	width: 100%;
+	height: 42px;
+    padding: 8px 12px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.467;
+    color: #34495e;
+    border: 2px solid #1abc9c;
+    border-radius: 6px;
+    box-shadow: none;
+    -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+.rainbow-login {
+	left:50%;
+	width:940px;
+    position: relative;
+    padding: 38px 38px 267px;
+    margin-top:50px;
+    margin-left:-30%;
+    margin-right:30%;
+    margin-bottom: 77px;
+    color: #fff;
+    background: url(../../img/login/imac.png) 0 0 no-repeat;
+    background-size: 940px 778px;
+}
+
+.rainbow-login-screen {
+    min-height: 473px;
+    padding: 123px 199px 33px 306px;
+    background-color: #1abc9c;
+}
+
+.rainbow-login-icon {
+    position: absolute;
+    top: 160px;
+    left: 200px;
+    width: 130px;
+}
+
+.rainbow-login-icon > img {
+    display: block;
+    width: 90%;
+    margin-bottom: 6px;
+}
+
+.rainbow-login-icon > h4 {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 34px;
+    opacity: .95;
+}
+
+.rainbow-login-icon > h4 small {
+    display: block;
+    font-size: inherit;
+    font-weight: 700;
+    color: inherit;
+}

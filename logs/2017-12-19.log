@@ -1,0 +1,967 @@
+2017-12-19 15:19:11 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:19:11 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:19:11 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:20:41 base.py methed:write_error line:117 ERROR - status_code = 403
+2017-12-19 15:21:10 auth.py methed:post line:24 DEBUG - param = login
+2017-12-19 15:21:10 auth.py methed:post line:27 DEBUG - {'user_name': 'Guest', 'password': 'Guest'}
+2017-12-19 15:21:10 auth.py methed:post line:31 DEBUG - user_name = guest
+2017-12-19 15:21:10 auth.py methed:post line:32 DEBUG - password = Guest
+2017-12-19 15:21:15 case.py methed:post line:34 DEBUG - param = index
+2017-12-19 15:21:16 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-19 15:21:17 testcase_manager.py methed:count_suite line:410 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-19 15:21:20 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:21:28 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 15:21:59 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:22:34 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['.svn', '三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 15:22:49 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 100, in scan_cases_local
+    versions = self.list_dir(local_path, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 214, in list_dir
+    path = os.sep.join(path, args[arg])
+TypeError: join() takes exactly one argument (2 given)
+
+2017-12-19 15:24:03 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 100, in scan_cases_local
+    versions = self.list_dir(local_path, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 214, in list_dir
+    path = os.sep.join(path, args[arg])
+TypeError: join() takes exactly one argument (2 given)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 15:24:03 testcase_manager.py methed:count_suite line:410 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 15:24:07 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:24:10 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 15:24:51 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:24:51 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:24:52 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:25:04 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:25:06 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 15:25:13 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:25:34 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:25:34 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:25:35 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:25:40 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:25:42 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 15:25:47 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:26:53 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:26:54 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:26:54 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:26:58 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:27:01 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 15:27:09 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:27:41 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 214, in list_dir
+    path = os.sep.join(path, args[arg])
+TypeError: join() takes exactly one argument (2 given)
+
+2017-12-19 15:27:42 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 214, in list_dir
+    path = os.sep.join(path, args[arg])
+TypeError: join() takes exactly one argument (2 given)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 15:27:42 testcase_manager.py methed:count_suite line:410 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 15:32:43 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:32:43 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:32:43 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:32:50 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:32:52 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 15:32:57 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:33:08 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 214, in list_dir
+    path = os.sep.join([path, args[arg]])
+TypeError: sequence item 0: expected str instance, TestCaseManager found
+
+2017-12-19 15:33:11 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 214, in list_dir
+    path = os.sep.join([path, args[arg]])
+TypeError: sequence item 0: expected str instance, TestCaseManager found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 15:33:14 testcase_manager.py methed:count_suite line:410 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 15:43:39 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:43:40 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:43:40 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:43:57 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:43:59 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 15:44:05 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:46:33 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:46:33 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:46:33 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:46:41 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:46:45 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 15:46:51 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:47:02 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 216, in list_dir
+    path = os.path.join([path, args[arg]])
+  File "D:\Python34\lib\ntpath.py", line 108, in join
+    result_drive, result_path = splitdrive(path)
+  File "D:\Python34\lib\ntpath.py", line 161, in splitdrive
+    normp = p.replace(_get_altsep(p), sep)
+AttributeError: 'list' object has no attribute 'replace'
+
+2017-12-19 15:52:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:52:09 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:52:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:52:52 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:52:57 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 15:53:12 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:53:28 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 216, in list_dir
+    path = os.path.join(path, args[arg])
+  File "D:\Python34\lib\ntpath.py", line 108, in join
+    result_drive, result_path = splitdrive(path)
+  File "D:\Python34\lib\ntpath.py", line 159, in splitdrive
+    if len(p) > 1:
+TypeError: object of type 'TestCaseManager' has no len()
+
+2017-12-19 15:59:00 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 15:59:01 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 15:59:01 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 15:59:06 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 15:59:08 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 15:59:17 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 15:59:45 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 97, in scan_cases_local
+    projects = self.list_dir(local_path)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 216, in list_dir
+    path = os.path.join(path, args[arg])
+  File "D:\Python34\lib\ntpath.py", line 108, in join
+    result_drive, result_path = splitdrive(path)
+  File "D:\Python34\lib\ntpath.py", line 159, in splitdrive
+    if len(p) > 1:
+TypeError: object of type 'TestCaseManager' has no len()
+
+2017-12-19 16:01:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:01:09 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:01:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:01:15 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:01:17 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:01:23 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:01:34 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['.svn', '三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:02:02 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 106, in scan_cases_local
+    modules = utils.list_dir(case_dir)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\common\utils.py", line 249, in list_dir
+    return os.listdir(path) if os.path.isdir(path) else []
+TypeError: 'list' does not support the buffer interface
+
+2017-12-19 16:02:05 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 106, in scan_cases_local
+    modules = utils.list_dir(case_dir)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\common\utils.py", line 249, in list_dir
+    return os.listdir(path) if os.path.isdir(path) else []
+TypeError: 'list' does not support the buffer interface
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 16:02:12 testcase_manager.py methed:count_suite line:407 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 16:03:54 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:03:54 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:03:55 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:03:57 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:03:57 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:03:58 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:04:04 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['.svn', '三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:04:25 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:04:25 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:04:26 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:04:30 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:04:32 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:04:37 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:05:57 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:05:58 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:05:58 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:06:07 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:06:10 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:06:14 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:06:41 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['.svn', '三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:10:33 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:10:34 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:10:34 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:10:58 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:11:00 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:11:03 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:11:19 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:13:22 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:13:23 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:13:23 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:13:45 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:13:47 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:13:49 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:14:07 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:15:25 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 106, in scan_cases_local
+    modules = utils.list_dir(case_dir)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\common\utils.py", line 250, in list_dir
+    if os.path.isdir(path):
+TypeError: 'list' does not support the buffer interface
+
+2017-12-19 16:17:11 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:17:12 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:17:12 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:20:46 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:20:50 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:21:45 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:22:03 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:22:52 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 108, in scan_cases_local
+    if os.path.isfile(os.sep.join(case_dir,m)):
+TypeError: join() takes exactly one argument (2 given)
+
+2017-12-19 16:22:52 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 108, in scan_cases_local
+    if os.path.isfile(os.sep.join(case_dir,m)):
+TypeError: join() takes exactly one argument (2 given)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 16:22:52 testcase_manager.py methed:count_suite line:407 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 16:23:50 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:23:50 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:23:51 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:23:58 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:24:00 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:24:02 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:24:06 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:24:40 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    result.extend(self.parse2Data(os.path.join(case_dir, m), os.sep.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project))
+TypeError: join() takes exactly one argument (2 given)
+
+2017-12-19 16:25:25 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:25:25 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:25:25 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:25:33 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:25:36 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:25:38 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:25:42 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:25:49 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    result.extend(self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project))
+TypeError: parse2Data() takes 10 positional arguments but 11 were given
+
+2017-12-19 16:25:52 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    result.extend(self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project))
+TypeError: parse2Data() takes 10 positional arguments but 11 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 16:25:53 testcase_manager.py methed:count_suite line:407 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 16:27:48 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:27:49 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:27:49 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:27:54 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:27:56 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:27:59 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:28:03 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:31:29 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:31:30 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:31:30 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:31:37 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:31:43 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:31:43 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:31:48 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:32:16 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(file.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa7 in position 799: illegal multibyte sequence
+
+2017-12-19 16:41:40 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:41:40 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:41:40 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:41:45 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:41:48 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:41:49 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:41:53 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:42:07 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(file.read(),encoding= 'gbk')
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa7 in position 799: illegal multibyte sequence
+
+2017-12-19 16:43:27 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:43:27 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:43:28 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:43:34 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:43:35 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:43:37 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:43:40 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:43:51 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(file.read(),encoding='UTF-8')
+TypeError: parse() got an unexpected keyword argument 'encoding'
+
+2017-12-19 16:44:13 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:44:13 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:44:14 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:44:22 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:44:26 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:44:28 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:44:31 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:44:40 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(file.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:45:53 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(file.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:45:55 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+2017-12-19 16:45:55 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 16:45:55 testcase_manager.py methed:count_suite line:409 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 16:47:04 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:47:04 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:47:04 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:49:13 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:49:14 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:49:15 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:49:21 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:49:23 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:49:24 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:49:39 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:49:59 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:50:28 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:50:28 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:50:29 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:51:20 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:51:23 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:51:24 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:51:29 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:51:41 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa7 in position 799: illegal multibyte sequence
+
+2017-12-19 16:52:24 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:52:25 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:52:25 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:52:50 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:52:53 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 16:52:53 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:52:56 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:52:57 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:52:59 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:58:42 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 16:58:43 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 16:58:43 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 16:58:49 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:58:50 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:58:51 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:58:53 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:58:54 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:58:55 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 16:58:55 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+2017-12-19 16:58:55 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 16:58:56 testcase_manager.py methed:count_suite line:409 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 16:59:08 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 16:59:10 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 16:59:10 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 16:59:16 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 16:59:54 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 17:00:04 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 17:01:01 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:01:01 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:01:01 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:01:47 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:01:50 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:01:51 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:01:55 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:02:12 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa7 in position 799: illegal multibyte sequence
+
+2017-12-19 17:02:23 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 483: illegal multibyte sequence
+
+2017-12-19 17:02:24 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xad in position 76: illegal multibyte sequence
+
+2017-12-19 17:02:25 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 456: illegal multibyte sequence
+
+2017-12-19 17:02:25 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xba in position 484: illegal multibyte sequence
+
+2017-12-19 17:02:26 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xba in position 61: illegal multibyte sequence
+
+2017-12-19 17:02:26 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xba in position 61: illegal multibyte sequence
+
+2017-12-19 17:02:27 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa2 in position 67: illegal multibyte sequence
+
+2017-12-19 17:02:27 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa2 in position 67: illegal multibyte sequence
+
+2017-12-19 17:02:28 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xba in position 61: illegal multibyte sequence
+
+2017-12-19 17:02:28 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xba in position 61: illegal multibyte sequence
+
+2017-12-19 17:02:29 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xba in position 61: illegal multibyte sequence
+
+2017-12-19 17:06:44 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:06:44 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:06:44 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:06:51 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:06:54 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:06:55 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:07:02 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:08:36 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read())
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 17:27:26 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:27:27 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:27:27 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:27:35 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:27:38 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:27:38 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:27:47 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:27:56 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read(),filename=pyfile)
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "D:\pythonworkspace\tornadotest\src\testcase\常规项目\三人简体主版本\V720\checklist\src\cases\double_laizi_room.py", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 17:28:28 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:28:28 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:28:29 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:28:34 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:28:36 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:28:37 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:28:40 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:28:42 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+2017-12-19 17:28:42 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 17:28:42 testcase_manager.py methed:count_suite line:409 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 17:29:14 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:29:16 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:29:18 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:29:21 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:30:38 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+2017-12-19 17:30:41 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 172, in parse2Data
+    property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 17:32:07 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:32:07 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:32:08 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:32:13 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:32:14 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 17:32:15 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:32:21 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:33:07 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 171, in parse2Data
+    property['doc_string'] = property_object.value.s.strip().decode('utf-8') if i == 0 and type(property_object) == ast.Expr else property.get('doc_string', '')
+AttributeError: 'str' object has no attribute 'decode'
+
+2017-12-19 17:33:40 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:33:41 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:33:41 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:33:46 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:33:49 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 17:33:50 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:33:55 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:36:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:36:10 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:36:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:36:17 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:36:19 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-19 17:36:20 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:36:24 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:37:02 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 171, in parse2Data
+    print(property_object.value.s.strip())
+AttributeError: 'Attribute' object has no attribute 's'
+
+2017-12-19 17:37:21 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 171, in parse2Data
+    print(property_object.value.s.strip())
+AttributeError: 'Attribute' object has no attribute 's'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 17:37:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:37:49 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:37:50 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:48:25 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:48:27 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:48:27 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:48:33 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:49:13 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 203, in parse2Data
+    m.update(src)
+TypeError: Unicode-objects must be encoded before hashing
+
+2017-12-19 17:49:13 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 203, in parse2Data
+    m.update(src)
+TypeError: Unicode-objects must be encoded before hashing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 17:49:13 testcase_manager.py methed:count_suite line:409 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 17:51:57 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 17:51:58 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 17:51:58 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 17:52:09 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 17:52:11 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 17:52:13 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 17:52:17 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 17:58:15 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 203, in parse2Data
+    m.update(src)
+TypeError: Unicode-objects must be encoded before hashing
+
+2017-12-19 17:58:18 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 203, in parse2Data
+    m.update(src)
+TypeError: Unicode-objects must be encoded before hashing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-19 17:58:20 testcase_manager.py methed:count_suite line:409 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-19 18:00:36 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 18:00:37 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 18:00:37 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 18:00:39 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 18:00:40 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 18:00:40 utils.py methed:popen_has_result line:159 DEBUG - command = svn update --username LucyLiu --password lly0000AA
+2017-12-19 18:00:45 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-19 18:00:52 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read(),filename=pyfile)
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "D:\pythonworkspace\tornadotest\src\testcase\常规项目\三人简体主版本\V720\checklist\src\cases\double_laizi_room_interface.py", line 41
+    print len(elments1)
+            ^
+SyntaxError: invalid syntax
+
+2017-12-19 18:08:12 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-19 18:08:13 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-19 18:08:13 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-19 18:09:30 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-19 18:09:34 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-19 18:09:39 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']

@@ -1,0 +1,71 @@
+{% extends "user_base.html" %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="col-sm-2">
+			<div class="input-group">
+				<span class="input-group-addon">用户名</span>
+				<input id="txt_condition_user_name" type="text" class="form-control" placeholder="用户名">
+			</div>
+		</div>
+
+		<div class="col-sm-2">
+			<div class="input-group">
+				<span class="input-group-addon">Email</span>
+				<input id="txt_condition_email" type="text" class="form-control" placeholder="Email">
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<select id="select_product" class="rainbow-select">
+				<option value="0" selected>选择所属工作室</option>
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select id="select_role" class="rainbow-select">
+				<option value="0" selected>选择角色</option>
+			</select>
+		</div>
+		<div class="btn-group">
+			<button id="btn_search" onclick="search()" type="button" class="btn btn-primary"><span class="fui-search"></button>
+		</div>
+		<div style="float:right;">
+			<!-- <button onclick="to_create_user()" type="button" class="btn btn-primary">新建</button>&nbsp; -->
+			<button onclick="to_modify_user()" type="button" class="btn btn-primary">修改</button>&nbsp;
+			<button onclick="del_user()" type="button" class="btn btn-primary">删除</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<table id="tb_user_list" class="table table-bordered table-hover">
+			<thead>
+				<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+					<th style="width:1%;"><input id="cb_users" type="checkbox"></th>
+					<th style="width:3%;">No.</th>
+					<th>用户名</th>
+					<th>角色</th>
+					<th>所属工作室</th>
+					<th>创建时间</th>
+					<th>最后登录时间</th>
+					<th>登录次数</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div id="user_pagination" class="pagination">
+		</div>
+	</div>
+</div>
+
+{% include 'modify_user_modal.html' %}
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_index();
+});
+</script>
+{% end %}

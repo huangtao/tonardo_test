@@ -1,0 +1,54 @@
+{% extends "log_base.html" %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="col-sm-2">
+			<div class="input-group">
+				<span class="input-group-addon">操作人</span>
+				<input id="txt_condition_user_name" type="text" class="form-control" placeholder="操作人">
+			</div>
+		</div>
+
+		<div class="col-sm-2">
+			<select id="select_status" class="rainbow-select">
+				<option value="-1" selected>选择状态</option>
+				<option value="1">成功</option>
+				<option value="0">失败</option>
+			</select>
+		</div>
+		<div class="btn-group">
+			<button id="btn_search" onclick="search()" type="button" class="btn btn-primary"><span class="fui-search"></button>
+		</div>
+		<div style="float:right;">
+			<button onclick="del_logs()" type="button" class="btn btn-primary">清空日志</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<table id="tb_log_list" class="table table-bordered table-hover">
+			<thead>
+				<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+					<th style="width:3%;">No.</th>
+					<th>操作人</th>
+					<th>操作</th>
+					<th>状态</th>
+					<th>操作时间</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div id="log_pagination" class="pagination">
+		</div>
+	</div>
+</div>
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_index();
+});
+</script>
+{% end %}

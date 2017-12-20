@@ -1,0 +1,249 @@
+{% extends "plan_base.html" %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-heading clearfix">
+		<h3 class="panel-title pull-left" style="padding-top: 7.5px;">修改升级测试计划</h3>
+		<div style="float:right;">
+			<button onclick="click_a('plan/index')" type="button" class="btn btn-primary">返回</button>&nbsp;
+			<button onclick="modify_plan(2)" type="button" class="btn btn-primary">保存</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">名称</label>
+					<div class="col-sm-10">
+						<input id="txt_plan_name" type="text" class="form-control" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">所属工作室</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<input id="txt_product_name" type="text" class="form-control" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">所属项目</label>
+						<div class="col-sm-8" style="padding-right:0px;">
+							<input id="txt_project_id" type="hidden">
+							<input id="txt_project_name" type="text" class="form-control" disabled>
+						</div>
+					</div>
+					<input id="txt_version_id" type="hidden">
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">项目类型</label>
+						<div class="col-sm-8" style="padding-left:10px;">
+							<select id="select_appium_type" class="rainbow-select">
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="col-sm-4 control-label text-right">运行环境</label>
+						<div class="col-sm-8" style="padding-right:0px;">
+							<select id="select_env_type" class="rainbow-select">
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">收件人</label>
+					<div class="col-sm-10">
+						<div class="btn-group btn-group-justified">
+							<div class="btn-group">
+								<button onclick="open_add_email_modal()" type="button" class="btn btn-primary" style="border-radius: 4px;" title="测试结果email收件人">
+									<span class="glyphicon glyphicon-envelope"></span>
+								</button>
+								<input id="txt_tos" type="hidden">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">待升级APK</label>
+					<div class="col-sm-9">
+						<select id="select_apk" class="rainbow-select">
+							<option value="0" selected>选择待升级APK</option>
+						</select>
+					</div>
+					<div class="col-sm-1" style="padding-left:0px;">
+						<button onclick="open_upload_apk_modal()" type="button" class="btn btn-primary" title="上传APK">
+							<span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">升级包</label>
+					<div class="col-sm-9">
+						<select id="select_package" class="rainbow-select" style="border-color: #d5dbdb;">
+							<option value="0" selected>选择升级包</option>
+						</select>
+					</div>
+					<div class="col-sm-1" style="padding-left:0px;">
+						<button onclick="open_upload_package_modal()" type="button" class="btn btn-primary" title="上传升级包">
+							<span class="glyphicon glyphicon-cloud-upload"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right"></label>
+					<label id="lb_apk_info" class="col-sm-10 control-label text-left"></label>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right"></label>
+					<label id="lb_package_info" class="col-sm-10 control-label text-left"></label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label class="col-sm-2 control-label text-right">计划描述</label>
+							<div class="col-sm-10">
+								<textarea id="txt_plan_desc" class="form-control" rows="4" placeholder="计划描述"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">执行方式</label>
+					<div class="col-sm-10">
+						<table>
+							<tr>
+								<td>
+				             		<label class="radio primary">
+										<input type="radio" data-toggle="radio" name="rd_exec" id="rd_exec_immi" data-radiocheck-toggle="radio" required>
+										立即执行
+									</label>
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+				             		<label class="radio primary">
+										<input type="radio" data-toggle="radio" name="rd_exec" id="rd_exec_once" data-radiocheck-toggle="radio" required>
+										定时执行
+									</label>
+								</td>
+								<td>&nbsp;</td>
+								<td>
+									<div class="input-group">
+										<input id="txt_once_hour" type="text" class="form-control" placeholder="0-23" disabled/>
+										<span class="input-group-addon">:</span>
+										<input id="txt_once_min" type="text" class="form-control" placeholder="0-59" disabled/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="radio primary">
+										<input type="radio" data-toggle="radio" name="rd_exec" id="rd_exec_regular" data-radiocheck-toggle="radio" required>
+										周期执行
+									</label>
+								</td>
+								<td>&nbsp;</td>
+								<td>
+									<div class="input-group">
+										<span class="input-group-addon">每天</span>
+										<input id="txt_cron_hour" type="text" class="form-control" placeholder="0-23" disabled/>
+										<span class="input-group-addon">:</span>
+										<input id="txt_cron_min" type="text" class="form-control" placeholder="0-59" disabled/>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				包含测试用例
+				<div style="float:right;">
+					<button onclick="open_select_suite_modal('modify')" type="button" class="btn btn-xs btn-primary">
+						<span class="glyphicon glyphicon-plus"></span>&nbsp;
+					</button>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table id="tb_rel_case_list" class="table table-bordered table-hover">
+					<thead>
+						<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+							<th>No.</th>
+							<th>测试用例名称</th>
+							<th>所属模块</th>
+							<th>逻辑ID</th>
+							<th>参数</th>
+							<th>方法名称</th>
+							<th>描述</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer clearfix">
+		<div style="float:right;">
+			<button onclick="click_a('plan/index')" type="button" class="btn btn-primary">返回</button>&nbsp;
+			<button onclick="modify_plan(2)" type="button" class="btn btn-primary">保存</button>
+		</div>
+	</div>
+</div>
+
+{% include 'select_suite_modal.html' %}
+{% include 'select_case_modal.html' %}
+{% include 'add_email_modal.html' %}
+{% include 'progress_modal.html' %}
+{% include '../common/upload_apk_modal.html' %}
+{% include '../common/upload_upgrade_package_modal.html' %}
+{% include 'select_upgrade_package_modal.html' %}
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_modify_plan(2);
+});
+</script>
+{% end %}

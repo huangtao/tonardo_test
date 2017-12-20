@@ -1,0 +1,28 @@
+<div class="modal fade" id="modal_select_suite" tabindex="-1" role="dialog" aria-labelledby="lb_select_suite" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content" style="height:80%;">
+			<div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <span id="title">选择测试模块</span>
+			</div>
+	        <div class="modal-body">
+				<table id="tb_suite_list_modal" class="table table-bordered table-hover">
+					<thead>
+						<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+							<th><input id="cb_suites" type="checkbox"></th>
+							<th>No.</th>
+							<th>模块名称</th>
+							<th>描述</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+	        </div>
+	        <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+	            <button onclick="open_select_case_modal()" type="button" class="btn btn-primary">下一步</button>
+	        </div>
+	    </div>
+	</div>
+</div>

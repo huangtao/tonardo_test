@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="{{ static_url('js/rainbow/main.js') }}"></script>
+{% end %}
+
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-body">
+	    <div class="canvas-holder" style="float:left;">
+	    	测试用例概况
+	        <canvas id="case_summary" style="width:100%;height:100%;"/>
+	    </div>
+	    <div class="canvas-holder" style="float:right;">
+	    	测试用例覆盖率
+	        <canvas id="case_coverage" style="width:100%;height:100%;"/>
+	    </div>
+	    <div id="chartjs-tooltip"></div>
+	</div>
+</div>
+{% end %}

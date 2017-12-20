@@ -1,0 +1,36 @@
+<div class="modal fade" id="modal_modify_pwd" tabindex="-1" role="dialog" aria-labelledby="lb_modify_pwd" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog">
+	    <div class="modal-content">
+			<div class="modal-header">
+				修改密码
+			</div>
+	        <div class="modal-body">
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_old_pwd">密码</label>
+					<div class="col-sm-8 input-group">
+						<input id="txt_old_pwd" type="password" class="form-control" placeholder="旧密码">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_new_pwd">新密码</label>
+					<div class="col-sm-8 input-group">
+						<input id="txt_new_pwd" type="password" class="form-control" placeholder="长度为6-10，且只能包含英文字母、数字或下划线">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<label class="col-sm-3 control-label text-right" for="txt_confirm_pwd">确认密码</label>
+					<div class="col-sm-8 input-group">
+						<input id="txt_confirm_pwd" type="password" class="form-control" placeholder="确认密码">
+					</div>
+				</div>
+				<br/>
+	        </div>
+	        <div class="modal-footer">
+	            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	            <button onclick="modify_pwd()" type="button" class="btn btn-primary">修改密码</button>
+	        </div>
+	    </div>
+	</div>
+</div>

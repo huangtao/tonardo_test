@@ -1,0 +1,58 @@
+{% extends "case_base.html" %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="col-sm-2">
+			<select id="select_project" class="rainbow-select">
+				<option value="0" selected>所属项目</option>
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select id="select_version" class="rainbow-select">
+				<option value="0" selected>所属版本</option>
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select id="select_suite" class="rainbow-select">
+				<option value="0" selected>所属模块</option>
+			</select>
+		</div>
+
+		<div class="btn-group">
+			<button onclick="search()" type="button" class="btn btn-primary"><span class="fui-search"></button>
+		</div>
+
+		<div style="float:right;">
+			<button onclick="" type="button" class="btn btn-primary">重置</button>
+			<button onclick="scan_cases()" type="button" class="btn btn-primary">扫描</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<table id="tb_suite_list" class="table table-bordered table-hover">
+			<thead>
+				<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+					<th>所属项目</th>
+					<th>版本</th>
+					<th>模块名称</th>
+					<th>测试用例个数</th>
+					<th>模块描述</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div id="suite_pagination" class="pagination">
+		</div>
+	</div>
+</div>
+
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_index();
+});
+</script>
+{% end %}

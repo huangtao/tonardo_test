@@ -1,0 +1,75 @@
+{% extends "case_base.html" %}
+
+{% block body %}
+<div class="panel panel-default" xmlns="http://www.w3.org/1999/html">
+	<div class="panel-heading">
+		<div class="btn-group">
+			<button id="btn_back" onclick="click_a('case/index')" type="button" class="btn btn-primary">返回</button>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">模块名称</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['suite']['name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">所属项目</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['suite']['project_name'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">所属包</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['suite']['package'] }}" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label text-right">描述</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" value="{{ result['suite']['desc'] }}" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<table id="tb_case_list" class="table table-bordered table-hover">
+			<thead>
+				<tr style="background-color:#1ABC9C;color:#FFFFFF;">
+					<th>用例ID</th>
+					<th>用例名称</th>
+					<th>用例描述</th>
+					<th>作者</th>
+					<th>更新时间</th>
+					<th>优先级</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div id="case_pagination" class="pagination">
+		</div>
+	</div>
+</div>
+{% end %}
+
+{% block bottom %}
+<script>
+$(function(){
+	init_suite_detail();
+});
+</script>
+{% end %}

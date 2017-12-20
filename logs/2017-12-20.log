@@ -1,0 +1,535 @@
+2017-12-20 10:06:30 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:06:35 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:06:35 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:06:51 base.py methed:write_error line:117 ERROR - status_code = 403
+2017-12-20 10:07:01 auth.py methed:post line:24 DEBUG - param = login
+2017-12-20 10:07:01 auth.py methed:post line:27 DEBUG - {'password': 'Guest', 'user_name': 'Guest'}
+2017-12-20 10:07:01 auth.py methed:post line:31 DEBUG - user_name = guest
+2017-12-20 10:07:01 auth.py methed:post line:32 DEBUG - password = Guest
+2017-12-20 10:07:05 case.py methed:post line:34 DEBUG - param = index
+2017-12-20 10:07:06 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-20 10:07:07 testcase_manager.py methed:count_suite line:417 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-20 10:07:11 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:07:17 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:07:33 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:08:52 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 217, in parse2Data
+    params = [property[id], property['case_version'], property['base_url'],property['class_name'],property['doc_string'],property['local_path'],
+KeyError: <built-in function id>
+
+2017-12-20 10:08:52 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 217, in parse2Data
+    params = [property[id], property['case_version'], property['base_url'],property['class_name'],property['doc_string'],property['local_path'],
+KeyError: <built-in function id>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-20 10:08:52 testcase_manager.py methed:count_suite line:417 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 10:09:28 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:09:31 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:09:33 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:09:35 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 217, in parse2Data
+    params = [property['id'], property['case_version'], property['base_url'],property['class_name'],property['doc_string'],property['local_path'],
+KeyError: <built-in function id>
+
+2017-12-20 10:09:35 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 217, in parse2Data
+    params = [property['id'], property['case_version'], property['base_url'],property['class_name'],property['doc_string'],property['local_path'],
+KeyError: <built-in function id>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-20 10:09:35 testcase_manager.py methed:count_suite line:417 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 10:10:46 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:10:46 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:10:46 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:10:54 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:11:01 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:11:05 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:11:58 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 220, in parse2Data
+    property['status'],property['sub_module'],property['timeout'],property['pending']]
+KeyError: 'pending'
+
+2017-12-20 10:15:30 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:15:31 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:15:31 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:16:50 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:16:54 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 10:16:56 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:17:03 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 211, in parse2Data
+    property['pending'] = property['pending'] if property['pending'] else ''
+KeyError: 'pending'
+
+2017-12-20 10:17:04 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 211, in parse2Data
+    property['pending'] = property['pending'] if property['pending'] else ''
+KeyError: 'pending'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-20 10:17:04 testcase_manager.py methed:count_suite line:418 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 10:18:19 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:18:19 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:18:20 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:18:29 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:18:33 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:18:35 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:18:38 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 211, in parse2Data
+    if not property['pending']:
+KeyError: 'pending'
+
+2017-12-20 10:18:38 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 211, in parse2Data
+    if not property['pending']:
+KeyError: 'pending'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-20 10:18:38 testcase_manager.py methed:count_suite line:419 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 10:26:00 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:26:01 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:26:01 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:26:09 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:26:11 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 10:26:16 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:30:41 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:30:42 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:30:42 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:31:06 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:31:24 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:31:28 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:32:35 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:32:36 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:32:36 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:32:42 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:32:45 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 10:32:47 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:33:08 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 224, in parse2Data
+    sql, params = self.db.assemble_sql(sql, params)
+TypeError: assemble_sql() missing 2 required positional arguments: 'dics' and 'delimiter'
+
+2017-12-20 10:35:31 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:35:32 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:35:32 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:35:37 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:35:42 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 10:35:45 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:51:22 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:51:23 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:51:23 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:51:30 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:51:38 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:51:42 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 10:52:50 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 10:52:51 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 10:52:51 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 10:53:07 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 10:53:11 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 10:53:15 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:11:29 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:11:30 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:11:30 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:11:34 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:11:38 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:11:42 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:12:39 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:12:40 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:12:40 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:12:45 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:12:50 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:12:53 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:15:05 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:15:05 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:15:06 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:15:10 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:15:13 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:15:16 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:17:13 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:17:14 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:17:14 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:18:38 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:18:41 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:18:46 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:20:50 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:20:51 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:20:51 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:21:18 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:21:22 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:21:27 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:25:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:25:49 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:25:49 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:26:11 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:26:15 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:26:22 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:27:41 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:27:42 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:27:42 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:27:45 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:27:45 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:27:45 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:27:45 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read(),filename=pyfile)
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "D:\pythonworkspace\tornadotest\src\testcase\常规项目\三人简体主版本\V720\checklist\src\cases\double_lai_room_play_interface.py", line 110
+    while self.game_page.element_is_exist("退出"):
+        ^
+IndentationError: expected an indented block
+
+2017-12-20 11:27:46 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read(),filename=pyfile)
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "D:\pythonworkspace\tornadotest\src\testcase\常规项目\三人简体主版本\V720\checklist\src\cases\laizi_room_play_interface.py", line 111
+    while self.game_page.element_is_exist("退出"):
+        ^
+IndentationError: expected an indented block
+
+2017-12-20 11:27:46 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read(),filename=pyfile)
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "D:\pythonworkspace\tornadotest\src\testcase\常规项目\三人简体主版本\V720\checklist\src\cases\three_room_play_interface.py", line 115
+    while self.game_page.element_is_exist("退出"):
+        ^
+IndentationError: expected an indented block
+
+2017-12-20 11:27:46 testcase_manager.py methed:count_suite line:427 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 11:30:32 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:30:33 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:30:33 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:30:35 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:30:35 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:30:35 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:30:37 testcase_manager.py methed:parse2Data line:151 DEBUG - Traceback (most recent call last):
+  File "D:\pythonworkspace\tornadotest\src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 147, in parse2Data
+    p = ast.parse(f.read(),filename=pyfile)
+  File "D:\Python34\lib\ast.py", line 35, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "D:\pythonworkspace\tornadotest\src\testcase\常规项目\三人简体主版本\V720\checklist\src\cases\three_room_play_interface.py", line 115
+    while self.game_page.element_is_exist("退出"):
+        ^
+IndentationError: expected an indented block
+
+2017-12-20 11:30:37 testcase_manager.py methed:count_suite line:427 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 11:34:39 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:34:40 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:34:40 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:34:50 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:34:50 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:34:50 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:34:51 testcase_manager.py methed:count_suite line:430 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 11:37:19 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:37:19 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:37:20 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:37:25 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:37:25 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:37:25 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:37:25 testcase_manager.py methed:count_suite line:430 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 11:38:54 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:38:55 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:38:55 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:38:58 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:38:59 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:39:02 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:42:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:42:09 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:42:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:42:57 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:46:58 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:47:02 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:51:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:51:49 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:51:50 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:52:03 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:52:14 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 11:52:17 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:55:13 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:55:13 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:55:13 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:55:18 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:55:22 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:55:25 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 11:57:44 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 11:57:44 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 11:57:45 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 11:57:54 case.py methed:post line:34 DEBUG - param = index
+2017-12-20 11:57:54 case.py methed:post line:34 DEBUG - param = init_index
+2017-12-20 11:57:56 testcase_manager.py methed:count_suite line:436 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            and pd.`name` = %s 
+2017-12-20 11:58:05 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 11:58:11 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 11:58:17 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 12:07:49 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 12:07:50 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 12:07:50 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 12:07:59 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 12:07:59 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 12:08:00 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 12:08:05 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 12:08:08 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 12:08:16 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 12:10:29 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 12:10:29 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 12:10:29 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 14:43:09 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 14:43:10 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 14:43:10 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 14:51:01 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 14:51:04 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 14:53:12 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:09:20 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:09:20 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:09:21 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:09:25 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:09:29 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 15:09:32 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:11:51 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:11:52 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:11:52 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:12:01 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:12:02 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 15:12:06 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:14:02 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:14:03 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:14:03 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:14:14 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:14:17 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 15:14:23 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:35:16 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:35:17 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:35:17 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:35:33 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:35:36 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 15:35:52 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:42:19 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:42:19 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:42:19 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:42:25 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:42:28 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 15:42:32 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:44:23 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:44:23 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:44:23 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:44:27 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:44:30 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 15:44:34 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:55:25 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:55:25 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:55:26 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 15:55:30 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 15:55:34 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 15:55:39 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 15:59:43 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 15:59:43 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 15:59:43 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 16:00:07 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 16:00:09 case.py methed:scan_cases line:86 DEBUG - {'version_id': '0', 'project_id': '0'}
+2017-12-20 16:00:13 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 16:07:42 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 16:07:42 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 16:07:43 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 16:07:47 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 16:07:50 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 16:07:52 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 16:08:29 testcase_manager.py methed:scan_cases line:85 ERROR - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 235, in parse2Data
+    if row_count > 0:
+TypeError: unorderable types: NoneType() > int()
+
+2017-12-20 16:08:30 case.py methed:scan_cases line:95 DEBUG - Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 82, in scan_cases
+    self.scan_cases_local()
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 110, in scan_cases_local
+    self.parse2Data(os.path.join(case_dir, m), os.path.join(local_path, project), 'cases', '', os.path.basename(m), [], None, version, pycharm_project, project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 235, in parse2Data
+    if row_count > 0:
+TypeError: unorderable types: NoneType() > int()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\web\handler\case.py", line 92, in scan_cases
+    self.case_manager.scan_cases(project)
+  File "D:/pythonworkspace/tornadotest/src\com\boyaa\RainbowCenter\manager\testcase_manager.py", line 88, in scan_cases
+    raise RainbowCenterException(error_msg, error_code)
+com.boyaa.RainbowCenter.common.exception.exception.RainbowCenterException
+
+2017-12-20 16:08:30 testcase_manager.py methed:count_suite line:461 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
+2017-12-20 16:09:44 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 16:09:44 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 16:09:45 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 16:09:48 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 16:09:50 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 16:09:52 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 16:10:15 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 16:10:15 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 16:10:16 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 16:10:20 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 16:10:22 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 16:10:24 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 16:14:11 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 16:14:12 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 16:14:12 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 16:15:38 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 16:15:41 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 16:15:45 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 16:39:48 device_manager.py methed:__start_adb_server line:35 DEBUG - start adb server
+2017-12-20 16:39:48 utils.py methed:popen_has_result line:159 DEBUG - command = adb devices -l|findstr "\<device\>" 
+2017-12-20 16:39:49 device_manager.py methed:get_devices line:84 DEBUG - select * from device where 1 = 1 
+2017-12-20 16:39:52 case.py methed:post line:34 DEBUG - param = scan_cases
+2017-12-20 16:39:52 case.py methed:scan_cases line:86 DEBUG - {'project_id': '0', 'version_id': '0'}
+2017-12-20 16:39:52 testcase_manager.py methed:scan_cases_local line:98 DEBUG - projects:['三人简体主版本', '约牌房', '统一大厅常规checklist', '麻将类子游戏']
+2017-12-20 16:39:54 testcase_manager.py methed:count_suite line:461 DEBUG - 
+                select *
+                from test_suite ts
+                left join project pj on pj.id = ts.project_id
+                left join product pd on pd.id = pj.product_id
+                where 1 = 1
+            
